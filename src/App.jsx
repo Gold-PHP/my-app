@@ -10,13 +10,13 @@ import CategoriesAdmin from './view/admin/menuAdmin/CategoriesAdmin';
 import ProductAdmin from './view/admin/menuAdmin/ProductsAdmin';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AccountAdmin from './view/admin/menuAdmin/AccountAdmin';
-
+import HomeCustomer from './view/customer/home';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<HomeCustomer />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<><Header /><Home /></>} />
@@ -24,8 +24,6 @@ function App() {
         <Route path="/categoriesAdmin" element={<><HeaderAdmin /><CategoriesAdmin /></>} />
         <Route path="/productAdmin" element={<><HeaderAdmin /><ProductAdmin /></>} />
         <Route path="/accountAdmin" element={<><HeaderAdmin /><AccountAdmin /></>} />
-        
-
       </Routes>
     </Router>
   );
