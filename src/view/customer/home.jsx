@@ -1,10 +1,14 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
+import '../../css/ajax-loader.gif';
+import '../../css/normalize.css';
+import '../../css/style.css';
+import '../../css/vendor.css';
 
 const Home = () => {
     return (
         <>
-            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" style={{display: "none"}}>
                 <defs>
                     <symbol xmlns="http://www.w3.org/2000/svg" id="link" viewBox="0 0 24 24">
                         <path fill="currentColor" d="M12 19a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm5 0a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm0-4a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm-5 0a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm7-12h-1V2a1 1 0 0 0-2 0v1H8V2a1 1 0 0 0-2 0v1H5a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3Zm1 17a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-9h16Zm0-11H4V6a1 1 0 0 1 1-1h1v1a1 1 0 0 0 2 0V5h8v1a1 1 0 0 0 2 0V5h1a1 1 0 0 1 1 1ZM7 15a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm0 4a1 1 0 1 0-1-1a1 1 0 0 0 1 1Z" />
@@ -53,10 +57,10 @@ const Home = () => {
                     </symbol>
                 </defs>
             </svg>
-            <div className="preloader-wrapper">
+            {/* <div className="preloader-wrapper">
                 <div className="preloader">
                 </div>
-            </div>
+            </div> */}
             <div className="offcanvas offcanvas-end" data-bs-scroll="true" tabIndex="-1" id="offcanvasCart" aria-labelledby="My Cart">
                 <div className="offcanvas-header justify-content-center">
                     <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
