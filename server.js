@@ -6,12 +6,9 @@ import Product from './backend/product/Product.js';
 import Categories from './backend/product/Categories.js';
 import jwt from "jsonwebtoken";
 
-
-
 const app = express();
 app.use(cors());
 app.use(express.json());
-
 
 app.get('/users', async (req, res) => {
     try {
@@ -28,8 +25,6 @@ app.get('/users', async (req, res) => {
         res.status(500).json({ error: 'Lỗi lấy danh sách người dùng', });
     }
 });
-
-
 
 app.post('/lock-user', async (req, res) => {
     const { email } = req.body;
@@ -51,9 +46,6 @@ app.post('/lock-user', async (req, res) => {
         res.status(500).json({ error: 'Lỗi khóa tài khoản' });
     }
 });
-
-
-
 
 app.post('/register', async (req, res) => {
     const { email, password, role, name } = req.body;
@@ -118,7 +110,6 @@ app.post("/login", async (req, res) => {
         res.status(500).json({ error: "Lỗi đăng nhập" });
     }
 });
-
 
 app.get('/categories', async (req, res) => {
 
@@ -258,9 +249,6 @@ app.delete('/products/:id', async (req, res) => {
         res.status(500).json({ error: 'Lỗi khi xóa sản phẩm', details: error.message });
     }
 });
-
-
-
 
 app.listen(3000, () => {
     console.log('✅ chạy r đóa');
